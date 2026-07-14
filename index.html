@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday, My Love! ❤️</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #ff4b5c;
@@ -161,6 +161,42 @@
             margin: 0 auto;
         }
 
+        /* Poem Container */
+        .poem-box {
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(5px);
+            padding: 50px 30px;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px dashed var(--secondary-color);
+        }
+
+        .poem-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+        }
+
+        .poem-content {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.25rem;
+            line-height: 2;
+            color: #333;
+        }
+
+        .poem-author {
+            margin-top: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #777;
+            letter-spacing: 2px;
+        }
+
         /* Polaroid Memory Grid */
         .polaroid-grid {
             display: grid;
@@ -185,7 +221,6 @@
             border: 1px solid #eee;
         }
 
-        /* Slight random rotation to make them look like loose photos */
         .polaroid:nth-child(odd) {
             transform: rotate(-2deg);
         }
@@ -329,6 +364,7 @@
             h1 { font-size: 3.5rem; }
             .quiz-options { grid-template-columns: 1fr; }
             .letter-box { padding: 30px; }
+            .poem-box { padding: 30px 20px; }
         }
 
         footer {
@@ -373,6 +409,36 @@
             I hope this little corner of the internet brings a massive smile to your face. Thank you for being you. 
 
             I love you more than words can say. Happy Birthday! ❤️
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- NEW: POEM SECTION -->
+    <section id="poem-section">
+        <h2>A Poem for You</h2>
+        <div class="poem-box">
+            <div class="poem-title">Little gifts.</div>
+            <div class="poem-content">
+                If kisses were raindrops<br>
+                I'd send you showers.<br>
+                If hugs were seconds<br>
+                I'd send you hours.<br>
+                If smiles were water<br>
+                I'd send you the sea.<br>
+                And if love were a person<br>
+                I'd send you me.<br>
+                <br>
+                But little gifts,<br>
+                of showers, hours,<br>
+                seas, and me,<br>
+                Wont be enough<br>
+                For you to truly see<br>
+                That my love for you<br>
+                Is unconditional and endless.<br>
+                And that I care tremendously.
+            </div>
+            <div class="poem-author">-dvt</div>
         </div>
     </section>
 
