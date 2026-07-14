@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Love! ❤️</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght=700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #ff4b5c;
+            --secondary-color: #ff758c;
+            --bg-gradient: linear-gradient(135deg, #ffeef8 0%, #ffd3e8 100%);
+            --text-color: #4a4a4a;
+            --card-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-color);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Section */
+        header {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            animation: heartbeat 1.5s infinite alternate;
+        }
+
+        @keyframes heartbeat {
+            to { transform: scale(1.03); }
+        }
+
+        .hero-sub {
+            font-size: 1.3rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        /* Interactive Note Generator Box */
+        .note-generator {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            margin-bottom: 40px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .note-display {
+            font-size: 1.1rem;
+            font-style: italic;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: #555;
+            transition: opacity 0.3s ease;
+        }
+
+        .generator-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 10px rgba(255, 75, 92, 0.2);
+        }
+
+        .generator-btn:hover {
+            background: var(--secondary-color);
+            transform: scale(1.05);
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 75, 92, 0.4);
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 117, 140, 0.6);
+        }
+
+        /* Section Global Styling */
+        section {
+            padding: 100px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        /* Section Dividers */
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--secondary-color), transparent);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Love Letter */
+        .letter-box {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            line-height: 2;
+            font-size: 1.15rem;
+            white-space: pre-line;
+            border-left: 6px solid var(--primary-color);
+        }
+
+        /* Reasons Grid */
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .reason-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .reason-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .reason-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .reason-card h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        /* Virtual Gift Section */
+        .gift-container {
+            text-align: center;
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .gift-box {
+            font-size: 5rem;
+            cursor: pointer;
+            display: inline-block;
+            transition: transform 0.3s ease;
+            animation: wobble 2s infinite;
+        }
+
+        @keyframes wobble {
+            0%, 100% { transform: rotate(0); }
+            50% { transform: rotate(10deg); }
+        }
+
+        .gift-reveal {
+            margin-top: 25px;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            display: none;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Quiz Styling */
+        .quiz-container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+        }
+
+        .quiz-question {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .quiz-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .quiz-btn {
+            background: #f8f9fa;
+            border: 2px solid #eee;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .quiz-btn:hover {
+            border-color: var(--secondary-color);
+            background: #fff0f2;
+        }
+
+        .feedback {
+            margin-top: 25px;
+            font-weight: 600;
+            font-size: 1.15rem;
+            min-height: 30px;
+        }
+
+        /* Responsive Elements */
+        @media screen and (max-width: 768px) {
+            h1 { font-size: 3.5rem; }
+            .quiz-options { grid-template-columns: 1fr; }
+            .letter-box { padding: 30px; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 0.95rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Falling Hearts Animation Canvas -->
+    <canvas id="hearts" style="position: fixed; top:0; left:0; pointer-events: none; z-index: 999;"></canvas>
+
+    <!-- 1. HERO HEADER SECTION -->
+    <header>
+        <h1>Happy Birthday, My Love!</h1>
+        <p class="hero-sub">The celebration starts right here</p>
+        
+        <!-- Interactive Note Generator -->
+        <div class="note-generator">
+            <div class="note-display" id="noteDisplay">Click below for a little reminder of how much you mean to me... ✨</div>
+            <button class="generator-btn" onclick="generateNote()">💖 Click for a Sweet Note</button>
+        </div>
+
+        <a href="#letter" class="btn">Read My Birthday Letter ✨</a>
+    </header>
+
+    <div class="divider"></div>
+
+    <!-- 2. LOVE LETTER SECTION -->
+    <section id="letter">
+        <h2>My Letter to You</h2>
+        <div class="letter-box">
+            Dear Prisha,
+
+            Happy Birthday! Today is all about celebrating the incredible person you are. From the endless late-night chats, the silly inside jokes, and every beautiful memory we share, my life is so much brighter with you in it.
+
+            Even when we are caught up in our busy routines, or chatting over screen-to-screen calls, you manage to make every single day feel special. You deserve the absolute world today and every single day. 
+
+            I hope this little corner of the internet brings a massive smile to your face. Thank you for being you. 
+
+            I love you more than words can say. Happy Birthday! ❤️
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- 3. REASONS WHY I LOVE YOU SECTION -->
+    <section id="reasons">
+        <h2>Reasons I Adore You</h2>
+        <div class="reasons-grid">
+            <div class="reason-card">
+                <span class="reason-icon">☀️</span>
+                <h3>Your Bright Energy</h3>
+                <p>No matter how rough my day is, talking to you instantly fixes it.</p>
+            </div>
+            <div class="reason-card">
+                <span class="reason-icon">🤭</span>
+                <h3>Our Inside Jokes</h3>
+                <p>We can crack jokes and laugh for hours about things nobody else would ever understand.</p>
+            </div>
+            <div class="reason-card">
+                <span class="reason-icon">💫</span>
+                <h3>Your Kind Heart</h3>
+                <p>The way you care for people and support me makes me fall for you more every day.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- 4. VIRTUAL GIFT UNBOXING -->
+    <section id="gift">
+        <h2>A Little Gift For You</h2>
+        <div class="gift-container">
+            <p style="margin-bottom: 20px; font-weight: 600;">Click the gift box to unwrap your birthday surprise!</p>
+            <div class="gift-box" id="giftBox" onclick="unwrapGift()">🎁</div>
+            <div class="gift-reveal" id="giftReveal">
+                <h3>🎟️ Dynamic Date Night Pass 🎟️</h3>
+                <p style="font-size: 1.1rem; margin-top: 10px; font-weight: 400; color: #555;">
+                    This digital coupon entitles you to one perfect evening of dinner, long drives, and zero interruptions. Valid forever! 😘
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- 5. RELATIONSHIP QUIZ -->
+    <section id="quiz">
+        <h2>The Ultimate Couple Quiz</h2>
+        <div class="quiz-container">
+            <div id="quiz-box">
+                <div class="quiz-question" id="question">Loading...</div>
+                <div class="quiz-options" id="options"></div>
+                <div class="feedback" id="feedback"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Built with love just for you | Happy Birthday! ❤️</p>
+    </footer>
+
+    <script>
+        // --- 1. SWEET NOTE GENERATOR LOGIC ---
+        const sweetNotes = [
+            "You are my favorite distraction. 😍",
+            "Just a reminder: you make the world a much better place just by being in it.",
+            "I love you more than pizza, and that's saying a lot. 🍕❤️",
+            "Thank you for always putting up with my silliness and laughing at my terrible jokes.",
+            "My favorite place in the entire world is right next to you.",
+            "If I had a flower for every time I thought of you, I'd have an infinite garden. 🌸",
+            "You're gorgeous, smart, and completely mine. How did I get so lucky?",
+            "No matter how busy life gets, you are always my peaceful escape."
+        ];
+
+        function generateNote() {
+            const noteDisplay = document.getElementById('noteDisplay');
+            
+            // Fade out
+            noteDisplay.style.opacity = 0;
+            
+            setTimeout(() => {
+                // Get a random note that is different from the current one
+                let currentText = noteDisplay.innerText;
+                let randomNote = sweetNotes[Math.floor(Math.random() * sweetNotes.length)];
+                
+                while (randomNote === currentText) {
+                    randomNote = sweetNotes[Math.floor(Math.random() * sweetNotes.length)];
+                }
+                
+                noteDisplay.innerText = randomNote;
+                // Fade back in
+                noteDisplay.style.opacity = 1;
+            }, 300);
+        }
+
+        // --- 2. VIRTUAL GIFT REVEAL ---
+        function unwrapGift() {
+            const gift = document.getElementById('giftBox');
+            const reveal = document.getElementById('giftReveal');
+            gift.style.animation = "none";
+            gift.innerText = "🔓💝";
+            reveal.style.display = "block";
+        }
+
+        // --- 3. QUIZ LOGIC ---
+        const quizData = [
+            {
+                question: "Where do our best conversations happen?",
+                options: ["Endless Chats", "In school", "After fights", "Video calls"],
+                correct: 0,
+                successMsg: "Bingo! 📱 Distance or daily routines have nothing on our digital marathons!"
+            },
+            {
+                question: "What is my absolute favorite thing about you?",
+                options: ["Your laugh", "Your kind heart", "Your beautiful smile", "All of the above!"],
+                correct: 3,
+                successMsg: "Trick question! Everything about you is perfect. 🥰"
+            }
+        ];
+
+        let currentQuestion = 0;
+
+        function loadQuestion() {
+            const q = quizData[currentQuestion];
+            document.getElementById('question').innerText = q.question;
+            const optionsDiv = document.getElementById('options');
+            optionsDiv.innerHTML = '';
+            document.getElementById('feedback').innerText = '';
+
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'quiz-btn';
+                btn.innerText = opt;
+                btn.onclick = () => checkAnswer(idx);
+                optionsDiv.appendChild(btn);
+            });
+        }
+
+        function checkAnswer(selectedIdx) {
+            const q = quizData[currentQuestion];
+            const feedback = document.getElementById('feedback');
+            
+            if (selectedIdx === q.correct) {
+                feedback.style.color = '#ff4b5c';
+                feedback.innerText = q.successMsg;
+                setTimeout(() => {
+                    currentQuestion++;
+                    if (currentQuestion < quizData.length) {
+                        loadQuestion();
+                    } else {
+                        document.getElementById('quiz-box').innerHTML = `
+                            <h3>🎉 Quiz Master Certified! 🎉</h3>
+                            <p style="margin-top: 15px;">You know us perfectly. But let's be honest—the real prize is just having you. ❤️</p>
+                        `;
+                    }
+                }, 3000);
+            } else {
+                feedback.style.color = '#777';
+                feedback.innerText = "Nice try, but think again! 😉";
+            }
+        }
+        loadQuestion();
+
+        // --- 4. FLOATING HEARTS CANVAS BACKGROUND ---
+        const canvas = document.getElementById('hearts');
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+
+        class Heart {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = height + Math.random() * 100;
+                this.size = Math.random() * 15 + 10;
+                this.speed = Math.random() * 1.2 + 0.6;
+                this.opacity = Math.random() * 0.4 + 0.2;
+            }
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = this.opacity;
+                ctx.fillStyle = '#ff758c';
+                ctx.beginPath();
+                ctx.moveTo(this.x, this.y);
+                ctx.bezierCurveTo(this.x - this.size / 2, this.y - this.size / 2, this.x - this.size, this.y + this.size / 3, this.x, this.y + this.size);
+                ctx.bezierCurveTo(this.x + this.size, this.y + this.size / 3, this.x + this.size / 2, this.y - this.size / 2, this.x, this.y);
+                ctx.fill();
+                ctx.restore();
+            }
+            update() {
+                this.y -= this.speed;
+                if (this.y < -50) {
+                    this.y = height + 50;
+                    this.x = Math.random() * width;
+                }
+            }
+        }
+
+        const heartsArray = Array.from({ length: 30 }, () => new Heart());
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            heartsArray.forEach(heart => {
+                heart.update();
+                heart.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+</body>
+</html>
