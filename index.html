@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday, My Love! ❤️</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght=700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #ff4b5c;
@@ -127,7 +127,7 @@
         /* Section Global Styling */
         section {
             padding: 100px 20px;
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
@@ -157,6 +157,54 @@
             font-size: 1.15rem;
             white-space: pre-line;
             border-left: 6px solid var(--primary-color);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Polaroid Memory Grid */
+        .polaroid-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+            padding: 20px 0;
+        }
+
+        .polaroid {
+            background: white;
+            padding: 15px 15px 25px 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .polaroid img {
+            width: 100%;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            border: 1px solid #eee;
+        }
+
+        /* Slight random rotation to make them look like loose photos */
+        .polaroid:nth-child(odd) {
+            transform: rotate(-2deg);
+        }
+        .polaroid:nth-child(even) {
+            transform: rotate(2deg);
+        }
+        .polaroid:hover {
+            transform: rotate(0deg) scale(1.05);
+            z-index: 10;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .caption {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.6rem;
+            text-align: center;
+            color: #333;
+            margin-top: 15px;
+            line-height: 1.2;
         }
 
         /* Reasons Grid */
@@ -164,6 +212,8 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 25px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .reason-card {
@@ -197,6 +247,8 @@
             padding: 50px;
             border-radius: 20px;
             box-shadow: var(--card-shadow);
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .gift-box {
@@ -233,6 +285,8 @@
             border-radius: 20px;
             box-shadow: var(--card-shadow);
             text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .quiz-question {
@@ -310,7 +364,7 @@
     <section id="letter">
         <h2>My Letter to You</h2>
         <div class="letter-box">
-            Dear Prisha,
+            Dear [Name],
 
             Happy Birthday! Today is all about celebrating the incredible person you are. From the endless late-night chats, the silly inside jokes, and every beautiful memory we share, my life is so much brighter with you in it.
 
@@ -324,7 +378,71 @@
 
     <div class="divider"></div>
 
-    <!-- 3. REASONS WHY I LOVE YOU SECTION -->
+    <!-- 3. PHOTO GALLERY SECTION (Polaroid Memory Wall) -->
+    <section id="gallery">
+        <h2>Favorite Moments of You</h2>
+        <div class="polaroid-grid">
+            
+            <!-- Polaroid 1: Childhood Photo -->
+            <div class="polaroid">
+                <img src="WhatsApp Image 2026-07-14 at 3.49.07 PM (1).jpeg" alt="Baby Photo">
+                <div class="caption">The cutest since day one! 👶❤️</div>
+            </div>
+
+            <!-- Polaroid 2: Pink outfit close up mirror selfie -->
+            <div class="polaroid">
+                <img src="WhatsApp Image 2026-07-14 at 3.46.27 PM (2).jpeg" alt="Mirror Selfie">
+                <div class="caption">Half hidden, fully gorgeous. 📸</div>
+            </div>
+
+            <!-- Polaroid 3: Pink outfit full shot standing -->
+            <div class="polaroid">
+                <img src="WhatsApp Image 2026-07-14 at 3.46.27 PM.jpeg" alt="Smiling pink top">
+                <div class="caption">My absolute favorite smile. 🥰</div>
+            </div>
+
+            <!-- Polaroid 4: Sunlit green wall background -->
+            <div class="polaroid">
+                <img src="WhatsApp Image 2026-07-14 at 3.49.07 PM.jpeg" alt="Sunlit against green wall">
+                <div class="caption">Even the sun can't compete with your glow! ☀️</div>
+            </div>
+
+            <!-- Polaroid 5: Tea Garden Walk -->
+            <div class="polaroid">
+                <img src="WhatsApp Image 2026-07-14 at 3.49.08 PM (1).jpeg" alt="Tea Garden">
+                <div class="caption">The sweetest view in the green. 🌿</div>
+            </div>
+
+            <!-- Polaroid 6: Ocean side pose looking back -->
+            <div class="polaroid">
+                <img src="WhatsApp Image 2026-07-14 at 3.49.08 PM.jpeg" alt="Beach View">
+                <div class="caption">Stunning by the sea. 🌊✨</div>
+            </div>
+
+            <!-- Polaroid 7: Wooden bridge walking scene -->
+            <div class="polaroid">
+                <img src="WhatsApp Image 2026-07-14 at 3.49.09 PM (1).jpeg" alt="Bridge Walk">
+                <div class="caption">Every path leads straight to you. 🌉</div>
+            </div>
+
+            <!-- Polaroid 8: Sitting on the stairs looking cool -->
+            <div class="polaroid">
+                <img src="WhatsApp Image 2026-07-14 at 3.49.09 PM.jpeg" alt="Sitting on stairs">
+                <div class="caption">Effortlessly cool, undeniably beautiful. 😎</div>
+            </div>
+
+            <!-- Polaroid 9: Traditional night dress-up outdoor next to car -->
+            <div class="polaroid">
+                <img src="WhatsApp Image 2026-07-14 at 3.46.27 PM (1).jpeg" alt="Traditional night pose">
+                <div class="caption">A literal dream under the night sky. 🌌</div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- 4. REASONS WHY I LOVE YOU SECTION -->
     <section id="reasons">
         <h2>Reasons I Adore You</h2>
         <div class="reasons-grid">
@@ -348,7 +466,7 @@
 
     <div class="divider"></div>
 
-    <!-- 4. VIRTUAL GIFT UNBOXING -->
+    <!-- 5. VIRTUAL GIFT UNBOXING -->
     <section id="gift">
         <h2>A Little Gift For You</h2>
         <div class="gift-container">
@@ -365,7 +483,7 @@
 
     <div class="divider"></div>
 
-    <!-- 5. RELATIONSHIP QUIZ -->
+    <!-- 6. RELATIONSHIP QUIZ -->
     <section id="quiz">
         <h2>The Ultimate Couple Quiz</h2>
         <div class="quiz-container">
@@ -428,7 +546,7 @@
         const quizData = [
             {
                 question: "Where do our best conversations happen?",
-                options: ["Endless Chats", "In school", "After fights", "Video calls"],
+                options: ["Endless Video Calls / Chats", "On romantic walks", "In quiet cafes", "While playing games"],
                 correct: 0,
                 successMsg: "Bingo! 📱 Distance or daily routines have nothing on our digital marathons!"
             },
