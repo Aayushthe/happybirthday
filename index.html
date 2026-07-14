@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday, My Love! ❤️</title>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -377,15 +376,12 @@
 </head>
 <body>
 
-    <!-- Falling Hearts Animation Canvas -->
     <canvas id="hearts" style="position: fixed; top:0; left:0; pointer-events: none; z-index: 999;"></canvas>
 
-    <!-- 1. HERO HEADER SECTION -->
     <header>
         <h1>Happy Birthday, My Love!</h1>
         <p class="hero-sub">The celebration starts right here</p>
         
-        <!-- Interactive Note Generator -->
         <div class="note-generator">
             <div class="note-display" id="noteDisplay">Click below for a little reminder of how much you mean to me... ✨</div>
             <button class="generator-btn" onclick="generateNote()">💖 Click for a Sweet Note</button>
@@ -396,11 +392,10 @@
 
     <div class="divider"></div>
 
-    <!-- 2. LOVE LETTER SECTION -->
     <section id="letter">
         <h2>My Letter to You</h2>
         <div class="letter-box">
-            Dear [Name],
+            Dear Prisha,
 
             Happy Birthday! Today is all about celebrating the incredible person you are. From the endless late-night chats, the silly inside jokes, and every beautiful memory we share, my life is so much brighter with you in it.
 
@@ -414,7 +409,6 @@
 
     <div class="divider"></div>
 
-    <!-- NEW: POEM SECTION -->
     <section id="poem-section">
         <h2>A Poem for You</h2>
         <div class="poem-box">
@@ -444,62 +438,52 @@
 
     <div class="divider"></div>
 
-    <!-- 3. PHOTO GALLERY SECTION (Polaroid Memory Wall) -->
     <section id="gallery">
         <h2>Favorite Moments of You</h2>
         <div class="polaroid-grid">
             
-            <!-- Polaroid 1: Childhood Photo -->
             <div class="polaroid">
-                <img src="img1.jpeg" alt="Baby Photo">
+                <img src="img1.jpg" alt="Baby Photo">
                 <div class="caption">The cutest since day one! 👶❤️</div>
             </div>
 
-            <!-- Polaroid 2: Pink outfit close up mirror selfie -->
             <div class="polaroid">
-                <img src="img2.jpeg" alt="Mirror Selfie">
+                <img src="img2.jpg" alt="Mirror Selfie">
                 <div class="caption">Half hidden, fully gorgeous. 📸</div>
             </div>
 
-            <!-- Polaroid 3: Pink outfit full shot standing -->
             <div class="polaroid">
-                <img src="img3.jpeg" alt="Smiling pink top">
+                <img src="img3.jpg" alt="Smiling pink top">
                 <div class="caption">My absolute favorite smile. 🥰</div>
             </div>
 
-            <!-- Polaroid 4: Sunlit green wall background -->
             <div class="polaroid">
-                <img src="img4.jpeg" alt="Sunlit against green wall">
+                <img src="img4.jpg" alt="Sunlit against green wall">
                 <div class="caption">Even the sun can't compete with your glow! ☀️</div>
             </div>
 
-            <!-- Polaroid 5: Tea Garden Walk -->
             <div class="polaroid">
-                <img src="img5.jpeg" alt="Tea Garden">
+                <img src="img5.jpg" alt="Tea Garden">
                 <div class="caption">The sweetest view in the green. 🌿</div>
             </div>
 
-            <!-- Polaroid 6: Ocean side pose looking back -->
             <div class="polaroid">
-                <img src="img6.jpeg" alt="Beach View">
+                <img src="img6.jpg" alt="Beach View">
                 <div class="caption">Stunning by the sea. 🌊✨</div>
             </div>
 
-            <!-- Polaroid 7: Wooden bridge walking scene -->
             <div class="polaroid">
-                <img src="img7.jpeg" alt="Bridge Walk">
+                <img src="img7.jpg" alt="Bridge Walk">
                 <div class="caption">Every path leads straight to you. 🌉</div>
             </div>
 
-            <!-- Polaroid 8: Sitting on the stairs looking cool -->
             <div class="polaroid">
-                <img src="img8.jpeg" alt="Sitting on stairs">
+                <img src="img8.jpg" alt="Sitting on stairs">
                 <div class="caption">Effortlessly cool, undeniably beautiful. 😎</div>
             </div>
 
-            <!-- Polaroid 9: Traditional night dress-up outdoor next to car -->
             <div class="polaroid">
-                <img src="img9.jpeg" alt="Traditional night pose">
+                <img src="img9.jpg" alt="Traditional night pose">
                 <div class="caption">A literal dream under the night sky. 🌌</div>
             </div>
 
@@ -508,7 +492,6 @@
 
     <div class="divider"></div>
 
-    <!-- 4. REASONS WHY I LOVE YOU SECTION -->
     <section id="reasons">
         <h2>Reasons I Adore You</h2>
         <div class="reasons-grid">
@@ -532,7 +515,6 @@
 
     <div class="divider"></div>
 
-    <!-- 5. VIRTUAL GIFT UNBOXING -->
     <section id="gift">
         <h2>A Little Gift For You</h2>
         <div class="gift-container">
@@ -549,7 +531,6 @@
 
     <div class="divider"></div>
 
-    <!-- 6. RELATIONSHIP QUIZ -->
     <section id="quiz">
         <h2>The Ultimate Couple Quiz</h2>
         <div class="quiz-container">
@@ -612,7 +593,7 @@
         const quizData = [
             {
                 question: "Where do our best conversations happen?",
-                options: ["Endless Video Calls / Chats", "On romantic walks", "In quiet cafes", "While playing games"],
+                options: ["Endless Chats", "In school", "After fights", "Video calls"],
                 correct: 0,
                 successMsg: "Bingo! 📱 Distance or daily routines have nothing on our digital marathons!"
             },
